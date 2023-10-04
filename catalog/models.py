@@ -21,6 +21,6 @@ class Goods(models.Model):
     #     return f"""#{self.description1}#
     # {self.description2}"""
 
-    def __str__(self):
-        return f"{self.name} {self.description} Ціна: {self.price}"
+    # def __str__(self):
+    #     return f"{self.name} {self.description} Ціна: {self.price}"
 
