@@ -16,10 +16,10 @@ class Goods(models.Model):
     description2 = models.CharField(max_length=250, blank=True, null=True)
     price = models.IntegerField(default=1000)
 
-    @property
-    def description(self):
-        return f"""#{self.description1}#
-    {self.description2}"""
+    # @property
+    # def description(self):
+    #     return f"""#{self.description1}#
+    # {self.description2}"""
 
     def __str__(self):
         return f"{self.name} {self.description} Ціна: {self.price}"
