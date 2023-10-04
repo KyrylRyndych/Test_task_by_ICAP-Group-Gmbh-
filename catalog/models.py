@@ -16,6 +16,14 @@ class Goods(models.Model):
     description2 = models.CharField(max_length=250, blank=True, null=True)
     price = models.IntegerField(default=1000)
 
+    @staticmethod
+    def get_goods(**kwargs):
+        try:
+            for i in kwargs:
+                Goods.objects.get(i=kwargs[i])
+        except FileNotFoundError:
+            pass
+
     # @property
     # def description(self):
     #     return f"""#{self.description1}#
@@ -23,4 +31,3 @@ class Goods(models.Model):
 
     # def __str__(self):
     #     return f"{self.name} {self.description} Ціна: {self.price}"
-
